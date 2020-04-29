@@ -2,7 +2,9 @@ version: "3.7"
 services:
   app:
     image: node:12.16.2-alpine
-    command: sh
+    command: npm run start
     working_dir: /app
     volumes:
     - ./:/app
+    ports:
+    - 8080:8080

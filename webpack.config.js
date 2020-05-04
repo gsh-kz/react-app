@@ -5,7 +5,6 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
-  mode: 'development',
   entry: './src/js/app.tsx',
   output: {
     path: `${__dirname}/dist`,
@@ -16,7 +15,7 @@ module.exports = {
       template: 'src/templates/index.html'
     }),
     new CleanWebpackPlugin({
-      cleanOnceBeforeBuildPatterns: ['dist/*']
+      cleanAfterEveryBuildPatterns: ['dist/*', '!dist/images/*', '!dist/index.html'],
     }),
     new MiniCssExtractPlugin({
       filename: 'css/app.css'
@@ -66,11 +65,11 @@ module.exports = {
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.json']
   },
-  devServer: {
-    contentBase: path.join(__dirname, 'dist'),
-    host: '0.0.0.0',
-    port: 8080,
-    hot: true,
-    watchContentBase: true
-  },
+  // devServer: {
+  //   contentBase: path.join(__dirname, 'dist'),
+  //   host: '0.0.0.0',
+  //   port: 8080,
+  //   hot: true,
+  //   watchContentBase: true
+  // },
 }

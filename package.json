@@ -2,11 +2,13 @@
   "name": "app",
   "version": "1.0.0",
   "description": "react-app",
+  "private": true,
   "main": "index.js",
   "scripts": {
-    "build": "webpack",
-    "watch": "webpack -w",
-    "start": "webpack-dev-server"
+    "build": "webpack --config webpack.config.dev.js",
+    "build:prod": "webpack --config webpack.config.prod.js",
+    "watch": "webpack -w --config webpack.config.dev.js",
+    "start": "webpack-dev-server --config webpack.config.dev.js"
   },
   "keywords": [],
   "author": "",
@@ -30,9 +32,11 @@
     "typescript": "^3.8.3",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.10.3"
+    "webpack-dev-server": "^3.10.3",
+    "webpack-merge": "^4.2.2"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "5.13.0",
     "bootstrap": "4.4.1",
     "react": "16.13.1",
     "react-bootstrap": "1.0.1",

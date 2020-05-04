@@ -1,0 +1,30 @@
+//
+// Variables
+// --------------------------------------------------
+
+// Colors
+/*
+$primary:       $blue !default;
+$secondary:     $gray-600 !default;
+$success:       $green !default;
+$info:          $cyan !default;
+$warning:       $yellow !default;
+$danger:        $red !default;
+$light:         $gray-100 !default;
+$dark:          $gray-800 !default;
+*/
+$primary: rgb(59,97,172);
+$secondary: #ff3991;
+$theme-colors: (
+  "accent": #ff3991
+);
+$body-bg: #eee;
+
+
+
+// Fonts
+$font-family-sans-serif: 'Roboto', 'Noto Sans JP', sans-serif;
+$font-family-monospace: 'Roboto Mono', monospace;
+
+// bootstrap
+@import "~bootstrap/scss/bootstrap";
